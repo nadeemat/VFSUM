@@ -414,4 +414,8 @@
         <label><!-- New_Volunteer_Campaign --></label>
         <name>New_Volunteer_Campaign</name>
     </webLinks>
+    <webLinks>
+        <label><!-- ViewCampaignInfluenceReport --></label>
+        <name>ViewCampaignInfluenceReport</name>
+    </webLinks>
 </CustomObjectTranslation>

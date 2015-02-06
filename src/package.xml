@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Volunteers for SF</fullName>
-    <description>Volunteers for SF Unmanaged</description>    
+    <description>Volunteers for SF Unmanaged</description>
     <types>
+        <members>ChangePasswordController</members>
         <members>ComponentControllerBase</members>
+        <members>ForgotPasswordController</members>
         <members>GW_CTRL_BatchJobsProgress</members>
+        <members>MyProfilePageController</members>
         <members>PageControllerBase</members>
+        <members>SiteLoginController</members>
+        <members>SiteRegisterController</members>
         <members>SoqlListView</members>
         <members>VOL_BATCH_Recurrence</members>
         <members>VOL_CTRL_BatchProgress</members>
@@ -57,12 +62,26 @@
         <name>ApexClass</name>
     </types>
     <types>
+        <members>SiteFooter</members>
+        <members>SiteHeader</members>
+        <members>SiteLogin</members>
+        <members>SitePoweredBy</members>
         <members>SoqlListView</members>
         <members>batchJobs</members>
         <name>ApexComponent</name>
     </types>
     <types>
+        <members>AnswersHome</members>
+        <members>BandwidthExceeded</members>
+        <members>ChangePassword</members>
+        <members>Exception</members>
+        <members>FileNotFound</members>
+        <members>ForgotPassword</members>
+        <members>ForgotPasswordConfirm</members>
+        <members>IdeasHome</members>
+        <members>InMaintenance</members>
         <members>JobCalendar</members>
+        <members>MyProfilePage</members>
         <members>NewAndEditVRS</members>
         <members>OpenReport</members>
         <members>PersonalSiteContactInfo</members>
@@ -73,6 +92,13 @@
         <members>PersonalSiteTemplate</members>
         <members>PersonalSiteTemplateEspanol</members>
         <members>SendBulkEmail</members>
+        <members>SiteLogin</members>
+        <members>SiteRegister</members>
+        <members>SiteRegisterConfirm</members>
+        <members>SiteTemplate</members>
+        <members>StdExceptionTemplate</members>
+        <members>Unauthorized</members>
+        <members>UnderConstruction</members>
         <members>VolunteersAbout</members>
         <members>VolunteersBatchJobsProgress</members>
         <members>VolunteersBulkEnterHours</members>
@@ -100,14 +126,28 @@
         <name>CustomApplication</name>
     </types>
     <types>
+        <members>Account.Active__c</members>
+        <members>Account.CustomerPriority__c</members>
+        <members>Account.NumberofLocations__c</members>
+        <members>Account.SLAExpirationDate__c</members>
+        <members>Account.SLASerialNumber__c</members>
+        <members>Account.SLA__c</members>
+        <members>Account.UpsellOpportunity__c</members>
         <members>Campaign.Number_of_Volunteers__c</members>
         <members>Campaign.Volunteer_Completed_Hours__c</members>
         <members>Campaign.Volunteer_Jobs__c</members>
         <members>Campaign.Volunteer_Shifts__c</members>
         <members>Campaign.Volunteer_Website_Time_Zone__c</members>
         <members>Campaign.Volunteers_Still_Needed__c</members>
+        <members>Case.EngineeringReqNumber__c</members>
+        <members>Case.PotentialLiability__c</members>
+        <members>Case.Product__c</members>
+        <members>Case.SLAViolation__c</members>
         <members>Contact.First_Volunteer_Date__c</members>
+        <members>Contact.Languages__c</members>
         <members>Contact.Last_Volunteer_Date__c</members>
+        <members>Contact.Level__c</members>
+        <members>Contact.Received_Date__c</members>
         <members>Contact.Unique_Volunteer_Count__c</members>
         <members>Contact.Volunteer_Auto_Reminder_Email_Opt_Out__c</members>
         <members>Contact.Volunteer_Availability__c</members>
@@ -126,10 +166,20 @@
         <members>Job_Recurrence_Schedule__c.Schedule_Start_Date_Time__c</members>
         <members>Job_Recurrence_Schedule__c.Volunteer_Job__c</members>
         <members>Job_Recurrence_Schedule__c.Weekly_Occurrence__c</members>
+        <members>Lead.CurrentGenerators__c</members>
+        <members>Lead.NumberofLocations__c</members>
+        <members>Lead.Primary__c</members>
+        <members>Lead.ProductInterest__c</members>
+        <members>Lead.SICCode__c</members>
         <members>Lead.Volunteer_Availability__c</members>
         <members>Lead.Volunteer_Notes__c</members>
         <members>Lead.Volunteer_Skills__c</members>
         <members>Lead.Volunteer_Status__c</members>
+        <members>Opportunity.CurrentGenerators__c</members>
+        <members>Opportunity.DeliveryInstallationStatus__c</members>
+        <members>Opportunity.MainCompetitors__c</members>
+        <members>Opportunity.OrderNumber__c</members>
+        <members>Opportunity.TrackingNumber__c</members>
         <members>Volunteer_Hours__c.Comments__c</members>
         <members>Volunteer_Hours__c.Contact__c</members>
         <members>Volunteer_Hours__c.End_Date__c</members>
@@ -360,9 +410,15 @@
         <name>CustomObject</name>
     </types>
     <types>
+        <members>Account-en_US</members>
+        <members>Account-es</members>
+        <members>Account-fr</members>
         <members>Campaign-en_US</members>
         <members>Campaign-es</members>
         <members>Campaign-fr</members>
+        <members>Case-en_US</members>
+        <members>Case-es</members>
+        <members>Case-fr</members>
         <members>Contact-en_US</members>
         <members>Contact-es</members>
         <members>Contact-fr</members>
@@ -372,6 +428,12 @@
         <members>Lead-en_US</members>
         <members>Lead-es</members>
         <members>Lead-fr</members>
+        <members>Opportunity-en_US</members>
+        <members>Opportunity-es</members>
+        <members>Opportunity-fr</members>
+        <members>Task-en_US</members>
+        <members>Task-es</members>
+        <members>Task-fr</members>
         <members>Volunteer_Hours__c-en_US</members>
         <members>Volunteer_Hours__c-es</members>
         <members>Volunteer_Hours__c-fr</members>
@@ -459,12 +521,65 @@
         <name>FieldSet</name>
     </types>
     <types>
+        <members>DE Default</members>
+        <name>HomePageLayout</name>
+    </types>
+    <types>
+        <members>Account-Account %28Marketing%29 Layout</members>
+        <members>Account-Account %28Sales%29 Layout</members>
+        <members>Account-Account %28Support%29 Layout</members>
+        <members>Account-Account Layout</members>
+        <members>Asset-Asset Layout</members>
+        <members>Campaign-Campaign Layout</members>
         <members>Campaign-Volunteers Campaign Layout</members>
+        <members>CampaignMember-Campaign Member Page Layout</members>
+        <members>Case-Case %28Marketing%29 Layout</members>
+        <members>Case-Case %28Sales%29 Layout</members>
+        <members>Case-Case %28Support%29 Layout</members>
+        <members>Case-Case Layout</members>
+        <members>Contact-Contact %28Marketing%29 Layout</members>
+        <members>Contact-Contact %28Sales%29 Layout</members>
+        <members>Contact-Contact %28Support%29 Layout</members>
+        <members>Contact-Contact Layout</members>
+        <members>Contract-Contract Layout</members>
+        <members>DandBCompany-D%26B Company Layout</members>
+        <members>Event-Event Layout</members>
+        <members>Global-Global Layout</members>
+        <members>Idea-Idea Layout</members>
         <members>Job_Recurrence_Schedule__c-Volunteer Job Recurrence Schedule Layout</members>
+        <members>Lead-Lead %28Marketing%29 Layout</members>
+        <members>Lead-Lead %28Sales%29 Layout</members>
+        <members>Lead-Lead %28Support%29 Layout</members>
+        <members>Lead-Lead Layout</members>
+        <members>Opportunity-Opportunity %28Marketing%29 Layout</members>
+        <members>Opportunity-Opportunity %28Sales%29 Layout</members>
+        <members>Opportunity-Opportunity %28Support%29 Layout</members>
+        <members>Opportunity-Opportunity Layout</members>
+        <members>OpportunityLineItem-Opportunity Product Layout</members>
+        <members>Order-Order Layout</members>
+        <members>OrderItem-Order Product Layout</members>
+        <members>Pricebook2-Price Book Layout</members>
+        <members>Product2-Product Layout</members>
+        <members>SocialPersona-Social Persona Layout</members>
+        <members>Solution-Solution Layout</members>
+        <members>Task-Task Layout</members>
+        <members>User-User Layout</members>
         <members>Volunteer_Hours__c-Volunteer Hours Layout</members>
         <members>Volunteer_Job__c-Volunteer Job Layout</members>
         <members>Volunteer_Recurrence_Schedule__c-Volunteer Recurrence Schedule Layout</members>
         <members>Volunteer_Shift__c-Volunteer Shift Layout</members>
+        <members>WorkCoaching-Coaching Layout</members>
+        <members>WorkCoaching-Coaching Layout 2%2E0</members>
+        <members>WorkFeedback-Feedback Layout</members>
+        <members>WorkFeedbackQuestion-Feedback Question Layout</members>
+        <members>WorkFeedbackQuestionSet-Feedback Question Set Layout</members>
+        <members>WorkFeedbackRequest-Feedback Request Layout</members>
+        <members>WorkGoal-Goal Layout</members>
+        <members>WorkGoal-Goal Layout 2%2E0</members>
+        <members>WorkGoalCollaborator-Goal Collaborator Layout</members>
+        <members>WorkGoalLink-Goal Link Layout</members>
+        <members>WorkGoalLink-Goal Link Layout 2%2E0</members>
+        <members>WorkPerformanceCycle-Performance Cycle Layout</members>
         <name>Layout</name>
     </types>
     <types>
@@ -472,13 +587,79 @@
         <name>Letterhead</name>
     </types>
     <types>
+        <members>Account.AllAccounts</members>
+        <members>Account.MyAccounts</members>
+        <members>Account.NewLastWeek</members>
+        <members>Account.NewThisWeek</members>
+        <members>Account.PlatinumandGoldSLACustomers</members>
+        <members>Activity.AllActivities</members>
+        <members>Activity.MyActivities</members>
+        <members>Activity.TodaysTasks</members>
+        <members>Activity.UpcomingEvents</members>
+        <members>Asset.AllAssets</members>
+        <members>Campaign.AllActiveCampaigns</members>
+        <members>Campaign.MyActiveCampaigns</members>
         <members>Campaign.Volunteer_Campaigns</members>
+        <members>Case.AllClosedCases</members>
+        <members>Case.AllOpenCases</members>
+        <members>Case.MyCases</members>
+        <members>Case.MyOpenCases</members>
+        <members>Contact.AllContacts</members>
+        <members>Contact.BirthdaysThisMonth</members>
+        <members>Contact.MyContacts</members>
+        <members>Contact.NewLastWeek</members>
+        <members>Contact.NewThisWeek</members>
+        <members>Contract.AllActivatedContracts</members>
+        <members>Contract.AllContracts</members>
+        <members>Contract.AllDraftContracts</members>
+        <members>Contract.AllInApprovalContracts</members>
+        <members>Contract.MyActivatedContracts</members>
+        <members>Contract.MyDraftContracts</members>
+        <members>Contract.MyInApprovalContracts</members>
+        <members>Idea.Ideas_Last_7_Days</members>
         <members>Job_Recurrence_Schedule__c.AllJRS</members>
+        <members>Lead.AllOpenLeads</members>
+        <members>Lead.MyUnreadLeads</members>
+        <members>Lead.TodaysLeads</members>
+        <members>Lead.ViewCustom1</members>
+        <members>Lead.ViewCustom2</members>
+        <members>Opportunity.AllOpportunities</members>
+        <members>Opportunity.ClosingNextMonth</members>
+        <members>Opportunity.ClosingThisMonth</members>
+        <members>Opportunity.MyOpportunities</members>
+        <members>Opportunity.NewLastWeek</members>
+        <members>Opportunity.NewThisWeek</members>
+        <members>Opportunity.Private</members>
+        <members>Opportunity.Won</members>
+        <members>Order.AllActivatedOrders</members>
+        <members>Order.AllDraftOrders</members>
+        <members>Order.AllOrders</members>
+        <members>Product2.AllProducts</members>
+        <members>Solution.AllReviewedSolutions</members>
+        <members>Solution.AllUnreviewedSolutions</members>
+        <members>User.ActiveUsers</members>
+        <members>User.AdminUsers</members>
+        <members>User.AllUsers</members>
         <members>Volunteer_Job__c.All_Jobs</members>
         <members>Volunteer_Job__c.Available_Jobs</members>
         <members>Volunteer_Job__c.Ongoing_Jobs</members>
         <members>Volunteer_Recurrence_Schedule__c.AllVRS</members>
         <name>ListView</name>
+    </types>
+    <types>
+        <members>LogACall</members>
+        <members>NewCase</members>
+        <members>NewContact</members>
+        <members>NewEvent</members>
+        <members>NewLead</members>
+        <members>NewNote</members>
+        <members>NewOpportunity</members>
+        <members>NewTask</members>
+        <members>Task.Defer</members>
+        <members>Task.EditDescription</members>
+        <members>Task.UpdatePriority</members>
+        <members>Task.UpdateStatus</members>
+        <name>QuickAction</name>
     </types>
     <types>
         <members>Campaign.Volunteers_Campaign</members>
@@ -529,6 +710,7 @@
         <members>Bootstrap</members>
         <members>Bootstrap4Force</members>
         <members>FullCalendar</members>
+        <members>SiteSamples</members>
         <members>jQueryFiles</members>
         <members>wtooltip</members>
         <name>StaticResource</name>
@@ -545,11 +727,15 @@
         <name>ValidationRule</name>
     </types>
     <types>
+        <members>Account.Billing</members>
         <members>Campaign.CampaignRoster</members>
         <members>Campaign.Campaign_Shift_Calendar</members>
         <members>Campaign.Find_Volunteers</members>
         <members>Campaign.Mass_Email_Volunteers</members>
         <members>Campaign.New_Volunteer_Campaign</members>
+        <members>Campaign.ViewCampaignInfluenceReport</members>
+        <members>Case.UpsellCrosssellOpportunity</members>
+        <members>Opportunity.DeliveryStatus</members>
         <members>Volunteer_Hours__c.Mass_Edit_Volunteer_Hours</members>
         <members>Volunteer_Job__c.Find_Volunteers</members>
         <members>Volunteer_Job__c.JobRoster</members>
@@ -591,5 +777,5 @@
         <members>Lead.Volunteer_Signup_Thank_You_Sent_Lead</members>
         <name>WorkflowTask</name>
     </types>
-    <version>31.0</version>
+    <version>30.0</version>
 </Package>
